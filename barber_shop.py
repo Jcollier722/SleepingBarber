@@ -6,7 +6,7 @@ from tkinter.filedialog import asksaveasfile
 from PIL import ImageTk,Image 
 
 BG = '#b4cffa'
-
+PK = '#f7cfff'
 def make_barbershop(self):
     
     
@@ -19,12 +19,15 @@ def make_barbershop(self):
     
     root = self.window
     
-    add_customer = tk.Button(root,text='Add Customer',height=3,width=40,font='Arial 12 bold',command=self.add_customer).place(relx=0.30,rely=0.87)
+    add_customer = tk.Button(root,text='Add Customer',height=2,width=40,font='Arial 12 bold',command=self.add_customer,bg=PK).place(relx=0.30,rely=0.91)
     action_label= tk.Label(root,textvariable=self.action,font='arial 22 bold',bg=BG).place(relx=0.28,rely=0.02)
 
-    waiting_label= tk.Label(root,textvariable=self.waiting_q,font='arial 22 bold',bg=BG).place(relx=0.28,rely=0.10)
+    self.chairs_full = tk.Label(root,text='Chairs are full, the customer left.',font='Arial 22 bold',bg=BG,fg='red')
+    #place(relx=0.28,rely=0.84)
+
+    waiting_label= tk.Label(root,textvariable=self.waiting_q,font='arial 18 bold',bg=BG).place(relx=0.05,rely=0.10)
     
-    
+ 
     
     
     

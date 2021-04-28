@@ -8,6 +8,7 @@ class ImageLabel(tk.Label):
     
     """a label that displays images, and plays them if they are gifs"""
     def load(self, im):
+        self.config(bg='#b4cffa')
         if isinstance(im, str):
             im = Image.open(im)
             
